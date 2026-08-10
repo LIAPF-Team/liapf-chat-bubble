@@ -1,0 +1,84 @@
+.chat-bubble-molecule {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--grey-color, rgb(19, 19, 19));
+  border-radius: 8px;
+  font-family: var(--font);
+  color: var(--color-text, rgb(255, 255, 255));
+  cursor: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  user-select: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chat-bubble-molecule:hover {
+  background-color: var(--grey-color, rgb(19, 19, 19));
+}
+
+.chat-bubble-molecule:active {
+  transform: scale(0.99);
+}
+
+.chat-bubble-molecule .chat-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chat-bubble-molecule .chat-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  min-width: 0;
+  gap: 0.25rem;
+}
+
+.chat-bubble-molecule .chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.chat-bubble-molecule .chat-name {
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--color-text, rgb(255, 255, 255));
+}
+
+.chat-bubble-molecule .chat-time {
+  font-size: 0.75rem;
+  color: var(--color-text, rgb(255, 255, 255));
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.chat-bubble-molecule .chat-last-message {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text, rgb(255, 255, 255));
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-bubble-molecule .chat-badges {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.15rem;
+}
+
+.chat-bubble-molecule .chat-badges .badge-atom {
+  display: inline-block;
+}

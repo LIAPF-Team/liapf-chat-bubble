@@ -1,0 +1,11 @@
+{
+  "name": "liapf-chat-bubble",
+  "description": "",
+  "tag": "liapf-chat-bubble",
+  "files": ["liapf-chat-bubble.js", "liapf-chat-bubble.css"],
+  "channels": [],
+  "dependencies": [
+    "github.com/LIAPF-Team/liapf-user-bubble",
+    "github.com/LIAPF-Team/liapf-badge"
+  ]
+}

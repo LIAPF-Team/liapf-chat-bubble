@@ -1,0 +1,29 @@
+.user-bubble-molecule {
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+}
+
+.user-bubble-molecule > liapf-badge {
+  position: absolute;
+  top: -8px;
+  left: 14px;
+}
+
+.user-bubble-molecule > liapf-simple-button {
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+}
+
+.user-bubble-molecule > liapf-icons {
+  padding-top: 6px;
+}
+
+.square {
+  border-radius: 10px;
+}

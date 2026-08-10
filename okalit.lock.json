@@ -1,0 +1,26 @@
+{
+  "liapf-badge": {
+    "registry": "github.com/LIAPF-Team/liapf-badge",
+    "type": "component",
+    "path": "src/catalogs/liapf-badge",
+    "installedAt": "2026-08-10T16:23:22.136Z"
+  },
+  "liapf-simple-button": {
+    "registry": "github.com/LIAPF-Team/liapf-simple-button",
+    "type": "component",
+    "path": "src/catalogs/liapf-simple-button",
+    "installedAt": "2026-08-10T16:24:40.964Z"
+  },
+  "liapf-icons": {
+    "registry": "github.com/LIAPF-Team/liapf-icons",
+    "type": "component",
+    "path": "src/catalogs/liapf-icons",
+    "installedAt": "2026-08-10T16:24:40.964Z"
+  },
+  "liapf-user-bubble": {
+    "registry": "github.com/LIAPF-Team/liapf-user-bubble",
+    "type": "component",
+    "path": "src/catalogs/liapf-user-bubble",
+    "installedAt": "2026-08-10T16:24:40.964Z"
+  }
+}

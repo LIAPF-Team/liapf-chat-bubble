@@ -1,0 +1,92 @@
+button {
+  --button-color: var(--color-text, rgb(255, 255, 255));
+  --button-text-color: var(--black-color, rgb(15, 15, 15));
+
+  min-width: 8rem;
+  min-height: 3rem;
+  border-radius: 5px;
+  border: 0;
+  padding: 0 1rem;
+
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.1s ease,
+    opacity 0.1s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+
+
+/* -------------------------
+   Variants
+------------------------- */
+
+.primary {
+  --button-color: var(--primary-color, rgb(87, 164, 169));
+}
+
+.secondary {
+  --button-color: var(--secondary-color, rgb(255, 111, 145));
+}
+
+.warning {
+  --button-color: var(--warning-color, rgb(255, 204, 0));
+}
+
+.orange {
+  --button-color: var(--orange-color, rgb(255, 153, 0));
+}
+
+.green {
+  --button-color: var(--green-color, rgb(105, 199, 118));
+}
+
+.purple {
+  --button-color: var(--purple-color, rgb(113, 105, 199));
+}
+
+.white {
+  --button-color: var(--color-text, rgb(255, 255, 255));
+}
+
+button.outline {
+  background-color: transparent;
+  border: 3px solid var(--button-color);
+  color: var(--button-color);
+}
+
+button.only-text {
+  background-color: transparent;
+  border: 0;
+  color: var(--button-color);
+  padding: 0;
+  min-width: auto;
+}
+
+button.circle {
+  border-radius: 50%;
+  min-width: 2rem;
+  width: 2rem;
+  min-height: 2rem;
+  height: 2rem;
+  padding: 0;
+}
+
+button.disabled,
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
