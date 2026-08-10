@@ -7,7 +7,7 @@ demo.setComponents([
   {
     name: 'LiapfChatBubble',
     tag: 'liapf-chat-bubble',
-    description: 'A component description',
+    description: 'A chat bubble component that displays user information, last message, and time.',
     import: () => import('./src/liapf-chat-bubble.js'),
     props: [
       { variant: { type: String, value: 'chat' } },

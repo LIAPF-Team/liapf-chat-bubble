@@ -1,6 +1,6 @@
 {
   "name": "liapf-chat-bubble",
-  "description": "",
+  "description": "A chat bubble component that displays user information, last message, and time.",
   "tag": "liapf-chat-bubble",
   "files": ["liapf-chat-bubble.js", "liapf-chat-bubble.css"],
   "channels": [],
