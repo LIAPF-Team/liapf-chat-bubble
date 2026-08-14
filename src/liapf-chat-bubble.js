@@ -4,6 +4,7 @@ import '@catalogs/liapf-user-bubble/liapf-user-bubble.js';
 import '@catalogs/liapf-badge/liapf-badge.js';
 
 import styles from "./liapf-chat-bubble.css?inline";
+import { nothing } from "lit";
 
 @defineElement({
   tag: "liapf-chat-bubble",
@@ -16,6 +17,7 @@ import styles from "./liapf-chat-bubble.css?inline";
     { time: { type: String, value: '' } },
     { serverName: { type: String, value: '' } },
     { connectedCount: { type: Number, value: 0 } },
+    { description: { type: String, value: '' } },
   ],
 })
 export class LiapfChatBubble extends Okalit {
@@ -25,6 +27,15 @@ export class LiapfChatBubble extends Okalit {
 
   get getChatTemplate() {
     return html`
+      <div class="chat-avatar">
+        <liapf-user-bubble 
+          url="${this.url.value}" 
+          size="3.2" 
+          color="${this.variant.value === 'room' ? 'secondary' : 'primary'}"
+          ?square="${this.variant.value === 'room'}">
+        </liapf-user-bubble>
+      </div>
+
       <div class="chat-content">
         <div class="chat-header">
           <span class="chat-name">${this.name.value}</span>
@@ -37,10 +48,15 @@ export class LiapfChatBubble extends Okalit {
 
   get getRoomTemplate() {
     return html`
-      <div class="chat-content">
+      <div class="chat-content room-content">
         <div class="chat-header">
           <span class="chat-name">${this.name.value}</span>
         </div>
+
+        <div class="chat-description">
+          <span class="chat-name">${this.description.value}</span>
+        </div>
+
         <div class="chat-badges">
           ${
             this.serverName.value
@@ -57,16 +73,11 @@ export class LiapfChatBubble extends Okalit {
 
   render() {
     return html`
-      <div class="chat-bubble-molecule variant-${this.variant.value}" @click="${this._onClick}">
-        <div class="chat-avatar">
-          <liapf-user-bubble 
-            url="${this.url.value}" 
-            size="3.2" 
-            color="${this.variant.value === 'room' ? 'secondary' : 'primary'}"
-            ?square="${this.variant.value === 'room'}">
-          </liapf-user-bubble>
-        </div>
-
+      <div
+        class="chat-bubble-molecule variant-${this.variant.value} ${this.variant.value}"
+        @click="${this._onClick}"
+        style="${this.variant.value === 'room' ? 'background-image: url("' + this.url.value + '")' : nothing}"
+      >
         ${this.variant.value === 'room' ? this.getRoomTemplate : this.getChatTemplate}
       </div>
     `;

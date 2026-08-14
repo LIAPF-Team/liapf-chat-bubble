@@ -22,11 +22,12 @@ import '@catalogs/liapf-chat-bubble/liapf-chat-bubble.js';
 
 ```html
 <liapf-chat-bubble
-  variant="chat"
+  variant="room"
   name="Username"
   url="https://okalit.com/okalit.png"
   lastMessage="Lorem ipsum dolor sit amet"
   time="10:30 AM"
+  description="This is a description of the chat bubble component and its functionality. Because it is a room bubble, it will display the server name and connected count."
   server-name="Server name"
   connected-count="30"
   @on:click="${handler}"
@@ -37,11 +38,12 @@ import '@catalogs/liapf-chat-bubble/liapf-chat-bubble.js';
 
 | Name | Type | Default |
 |------|------|---------|
-| `variant` | `String` | `"chat"` |
+| `variant` | `String` | `"room"` |
 | `name` | `String` | `"Username"` |
 | `url` | `String` | `"https://okalit.com/okalit.png"` |
 | `lastMessage` | `String` | `"Lorem ipsum dolor sit amet"` |
 | `time` | `String` | `"10:30 AM"` |
+| `description` | `String` | `"This is a description of the chat bubble component and its functionality. Because it is a room bubble, it will display the server name and connected count."` |
 | `server-name` | `String` | `"Server name"` |
 | `connected-count` | `Number` | `30` |
 
